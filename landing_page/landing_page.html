@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   header {
+  background-color: #d6510f;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-links li a:hover {
+  background-color: #ff6600;
+  transition: background-color 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.hero {
+  background-image: url('path/to/your/background-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d5dbc6;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ed7e7e;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+b{
+  color: #d610f0;
+}
+h2{
+  color: #ef3232;
+}
+
+
+  </style>
+  <script>
+    const navLinks = document.querySelectorAll("nav ul li a");
+navLinks.forEach(link => {
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// Form submission handling
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = {};
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+  // You can use 'data' object to send the form data to your server or perform other actions
+  console.log(data);
+});
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#home"><img src="logo.png" alt=""></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Our Landing Page </h1>
+        <!-- <img src="3.JPG" alt="" width="400" height="200"> -->
+        <p><b>Give the people light and they will find their way</b></p>
+         <p>Connect your favorite platforms and apps to WayMore to save time and do more with your campaigns.<br> We work seamlessly with hundreds of CRM, CMS, and eCommerce platforms or apps to streamline processes. <br>Our advanced API is recognized for its ease of use and flexibility.</p>
+        <a href="#contact" class="cta-btn"><h3>Get Started</h3></a>
+      </div>
+    </section>
+<br>
+    <section id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>our soul, which is our true being, is inseparably a part of the Divine and reveals the spiritual and the divine laws that govern all life and how we may apply those laws for our greater health, wealth, and happiness. In keeping with the traditions of Spiritualism, this philosophy is the spiritual guidance from a spiritual teacher.
+          <br><br>
+          The very foundation of these spiritual teachings is the Law of Personal Responsibility, which states in part that we are responsible for all our experiences. By the laws that we establish with our thoughts, acts, and words, we are the creators of all our experiences. In other words, our experiences in life are reflecting back to us where we are in consciousness. In this understanding, God (or Spirit) is not a creator or a judge, but God is a divine, neutral, infinite, intelligent energy that sustains all life. Another divine law that is emphasized by the spiritual teacher of this life philosophy is that like attracts like and becomes the Law of Attachment. The teaching of divine grace is also elucidated.
+        </p>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2>Features</h2>
+        <ul>
+          <li>The Serenity Association is a Spiritualist organization dedicated to the study, application, and dissemination of the spiritual teachings of the Living Light philosophy, which was given through the mediumship of the founder, Mr. Richard P. Goodwin.</li>
+          <li>In addition, great emphasis is placed upon understanding how our minds work and how we may more effectively use our minds in a way that it has been designed to be used. The teachings of this philosophy help us discern between the thoughts of our mind and the gentle promptings of our soul.</li>
+          <li>These spiritual teachings are filled with inspirational quotes, affirmations, spiritual sayings, and spiritual exercises. The spiritual light of the Living Light Philosophy illumines a path to a conscious awareness of our own soul, our own divinity, but it is up to us to make the effort to walk upon that path.
+
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Vanita Jadhav Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
